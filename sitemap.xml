@@ -13,6 +13,12 @@
     <image:image><image:loc>https://vendolanas.cl/assets/img/og/reginella.jpg</image:loc></image:image>
   </url>
   <url>
+    <loc>https://vendolanas.cl/ukryl.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://vendolanas.cl/assets/img/og/ukryl.jpg</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://vendolanas.cl/blog/</loc>
     <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>

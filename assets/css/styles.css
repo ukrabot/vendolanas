@@ -356,7 +356,7 @@ h1, h2, h3, h4 { font-family: var(--fuente-titulo); color: var(--rosa-oscuro); l
     .nosotros-imagenes { max-width: 520px; margin: 0 auto; width: 100%; }
 }
 
-@media (max-width: 820px) {
+@media (max-width: 1080px) {
     .menu-toggle { display: inline-flex; }
     .nav-links {
         display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--blanco);
@@ -511,3 +511,24 @@ h1, h2, h3, h4 { font-family: var(--fuente-titulo); color: var(--rosa-oscuro); l
 .blog-card .btn { align-self: flex-start; margin-top: 10px; }
 .blog-home, .blog-portada { padding: 80px 0; }
 @media (max-width: 820px) { .blog-cards { grid-template-columns: 1fr; } .articulo h1 { font-size: 2rem; } .articulo-cuerpo h2 { font-size: 1.55rem; } .blog-home, .blog-portada { padding: 56px 0; } }
+
+/* ---------- Menú con 8 enlaces: ajuste en pantallas medianas ---------- */
+@media (min-width: 1081px) and (max-width: 1279px) { .nav-links { gap: 18px; } .nav-links a { font-size: .92rem; } }
+
+/* ---------- Página de marca Ukryl ---------- */
+.lineas { padding: 70px 0; }
+.lineas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+.linea-card { background: var(--alt, var(--crema)); border-radius: var(--radio); overflow: hidden; display: flex; flex-direction: column; border: 1px solid var(--crema-oscuro); }
+.linea-card img { width: 100%; aspect-ratio: 1 / 1; object-fit: contain; background: var(--blanco); }
+.linea-card-texto { padding: 22px 24px 26px; display: flex; flex-direction: column; flex: 1; }
+.linea-card h3 { font-size: 1.4rem; margin-bottom: 8px; }
+.linea-card p { color: var(--texto-medio); font-size: .96rem; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 14px 0 18px; }
+.chip { background: var(--blanco); border: 1px solid var(--crema-oscuro); border-radius: 20px; padding: 4px 12px; font-size: .85rem; font-weight: 500; }
+.linea-acciones { display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto; }
+.linea-seccion { padding: 70px 0; }
+.linea-seccion .seccion-titulo p a { color: var(--rosa-btn); text-decoration: underline; text-underline-offset: 3px; font-weight: 500; }
+.linea-seccion .seccion-titulo p { max-width: 720px; }
+.linea-pie { text-align: center; margin-top: 34px; }
+@media (max-width: 992px) { .lineas-grid { grid-template-columns: 1fr; } }
+@media (max-width: 680px) { .lineas, .linea-seccion { padding: 44px 0; } }

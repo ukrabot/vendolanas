@@ -433,3 +433,35 @@ h1, h2, h3, h4 { font-family: var(--fuente-titulo); color: var(--rosa-oscuro); l
 .topbar a { color: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 
 .stock-no { color: #b3261e; font-weight: 600; font-size: .95rem; }
+
+/* ---------- Página de marca (Reginella) ---------- */
+.fondo-crema { background: var(--crema); --alt: var(--blanco); }
+.fondo-blanco { background: var(--blanco); --alt: var(--crema); }
+.fondo-crema .faq-item { background: var(--blanco); }
+.producto-card { position: relative; }
+.badge-agotado { position: absolute; top: 12px; left: 12px; z-index: 2; background: #b3261e; color: var(--blanco); font-size: .78rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; }
+.ficha-marca a { color: var(--rosa-btn); text-decoration: underline; text-underline-offset: 3px; }
+.comparativa, .guia { padding: 70px 0; }
+.tabla-scroll { overflow-x: auto; background: var(--blanco); border-radius: var(--radio); box-shadow: 0 10px 30px var(--sombra); }
+.tabla-comp { width: 100%; min-width: 760px; border-collapse: collapse; font-size: .95rem; }
+.tabla-comp caption { text-align: left; padding: 18px 20px 8px; font-weight: 600; color: var(--texto-medio); font-size: .9rem; }
+.tabla-comp th, .tabla-comp td { text-align: left; padding: 14px 20px; border-bottom: 1px solid var(--crema-oscuro); vertical-align: top; }
+.tabla-comp thead th { background: var(--rosa-suave); color: var(--texto-oscuro); font-weight: 600; }
+.tabla-comp tbody th { font-weight: 600; }
+.tabla-comp tbody th a { color: var(--rosa-btn); text-decoration: underline; text-underline-offset: 3px; }
+.tabla-comp tbody tr:last-child th, .tabla-comp tbody tr:last-child td { border-bottom: 0; }
+.estado-ok { color: var(--wsp); font-weight: 600; }
+.estado-no { color: #b3261e; font-weight: 600; }
+.guia-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.guia-card { background: var(--alt, var(--crema)); border-radius: var(--radio); padding: 28px 26px; }
+.guia-card h3 { font-size: 1.3rem; margin-bottom: 12px; }
+.guia-card p { color: var(--texto-medio); }
+.mas-marcas { padding: 60px 0; }
+.mas-marcas h2 { font-size: 1.8rem; margin-bottom: 12px; }
+.mas-marcas .container > p { color: var(--texto-medio); margin-bottom: 22px; max-width: 70ch; }
+.usos-lista li a { font-weight: 500; }
+.usos-lista li a:hover { color: var(--rosa-btn); }
+@media (max-width: 992px) { .guia-grid { grid-template-columns: 1fr; } }
+@media (max-width: 680px) { .comparativa, .guia, .mas-marcas { padding: 44px 0; } }
+
+.producto-acciones.apiladas { grid-template-columns: 1fr; }

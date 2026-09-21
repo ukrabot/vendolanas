@@ -431,3 +431,5 @@ h1, h2, h3, h4 { font-family: var(--fuente-titulo); color: var(--rosa-oscuro); l
 @media (max-width: 680px) { .producto-info h4 { font-size: 1rem; } .grupo-cabecera h3 { font-size: 1.4rem; } .grupo-productos { margin-bottom: 40px; } }
 
 .topbar a { color: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+
+.stock-no { color: #b3261e; font-weight: 600; font-size: .95rem; }

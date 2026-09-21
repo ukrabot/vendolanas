@@ -97,6 +97,12 @@
     <image:image><image:loc>https://www.vendolanas.cl/assets/img/productos/hilo-algodon-palo-rosa.webp</image:loc></image:image>
   </url>
   <url>
+    <loc>https://www.vendolanas.cl/producto/algodon-reginella-blanco.html</loc>
+    <lastmod>2026-09-20</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://www.vendolanas.cl/assets/img/productos/algodon-reginella-blanco.webp</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://www.vendolanas.cl/producto/lana-chenille-cafe.html</loc>
     <lastmod>2026-09-20</lastmod>
     <priority>0.8</priority>
@@ -133,6 +139,12 @@
     <image:image><image:loc>https://www.vendolanas.cl/assets/img/productos/lana-chenille-morado.webp</image:loc></image:image>
   </url>
   <url>
+    <loc>https://www.vendolanas.cl/producto/lana-chenille-azul-marino.html</loc>
+    <lastmod>2026-09-20</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://www.vendolanas.cl/assets/img/productos/lana-chenille-azul-marino.webp</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://www.vendolanas.cl/producto/lana-ukryl-amarillo.html</loc>
     <lastmod>2026-09-20</lastmod>
     <priority>0.8</priority>
@@ -167,5 +179,23 @@
     <lastmod>2026-09-20</lastmod>
     <priority>0.8</priority>
     <image:image><image:loc>https://www.vendolanas.cl/assets/img/productos/lana-ukryl-cafe.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.vendolanas.cl/producto/lana-ukryl-verde-pistacho.html</loc>
+    <lastmod>2026-09-20</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://www.vendolanas.cl/assets/img/productos/lana-ukryl-verde-pistacho.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.vendolanas.cl/producto/lana-ukryl-rojo-italiano.html</loc>
+    <lastmod>2026-09-20</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://www.vendolanas.cl/assets/img/productos/lana-ukryl-rojo-italiano.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.vendolanas.cl/producto/lana-ukryl-fucsia.html</loc>
+    <lastmod>2026-09-20</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://www.vendolanas.cl/assets/img/productos/lana-ukryl-fucsia.webp</image:loc></image:image>
   </url>
 </urlset>

@@ -528,4 +528,10 @@
     <priority>0.8</priority>
     <image:image><image:loc>https://vendolanas.cl/assets/img/productos/lana-ukryl-rosado.webp</image:loc></image:image>
   </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/palillos-circulares-pony.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://vendolanas.cl/assets/img/productos/palillos-circulares-pony.webp</image:loc></image:image>
+  </url>
 </urlset>

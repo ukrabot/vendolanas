@@ -97,6 +97,18 @@
     <image:image><image:loc>https://vendolanas.cl/assets/img/productos/cono-de-algodon-verde-pino.webp</image:loc></image:image>
   </url>
   <url>
+    <loc>https://vendolanas.cl/producto/cono-de-algodon-blanco.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://vendolanas.cl/assets/img/productos/cono-de-algodon-blanco.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/cono-de-algodon-guinda.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://vendolanas.cl/assets/img/productos/cono-de-algodon-guinda.webp</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://vendolanas.cl/producto/hilo-algodon-verde-botella.html</loc>
     <lastmod>2026-09-21</lastmod>
     <priority>0.8</priority>
@@ -211,6 +223,24 @@
     <image:image><image:loc>https://vendolanas.cl/assets/img/productos/hilo-algodon-rojo.webp</image:loc></image:image>
   </url>
   <url>
+    <loc>https://vendolanas.cl/producto/hilo-algodon-lila.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://vendolanas.cl/assets/img/productos/hilo-algodon-lila.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/hilo-algodon-malva.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://vendolanas.cl/assets/img/productos/hilo-algodon-malva.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/hilo-algodon-terracota.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://vendolanas.cl/assets/img/productos/hilo-algodon-terracota.webp</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://vendolanas.cl/producto/lana-chenille-cafe.html</loc>
     <lastmod>2026-09-21</lastmod>
     <priority>0.8</priority>
@@ -317,5 +347,41 @@
     <lastmod>2026-09-21</lastmod>
     <priority>0.8</priority>
     <image:image><image:loc>https://vendolanas.cl/assets/img/productos/lana-ukryl-fucsia.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/lana-ukryl-azul-rey.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://vendolanas.cl/assets/img/productos/lana-ukryl-azul-rey.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/lana-ukryl-blanco.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://vendolanas.cl/assets/img/productos/lana-ukryl-blanco.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/lana-ukryl-gris.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://vendolanas.cl/assets/img/productos/lana-ukryl-gris.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/lana-ukryl-mostaza.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://vendolanas.cl/assets/img/productos/lana-ukryl-mostaza.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/lana-ukryl-uva.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://vendolanas.cl/assets/img/productos/lana-ukryl-uva.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/lana-ukryl-verde-agua.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://vendolanas.cl/assets/img/productos/lana-ukryl-verde-agua.webp</image:loc></image:image>
   </url>
 </urlset>

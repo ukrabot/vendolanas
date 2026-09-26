@@ -546,4 +546,139 @@
     <priority>0.8</priority>
     <image:image><image:loc>https://vendolanas.cl/assets/img/productos/palillos-circulares-pony.webp</image:loc></image:image>
   </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/lana-extra-amarillo.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/lana-extra-amarillo.webp</image:loc>
+      <image:title>Lana Extra Amarillo</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/lana-extra-arena.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/lana-extra-arena.webp</image:loc>
+      <image:title>Lana Extra Arena</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/lana-extra-azul.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/lana-extra-azul.webp</image:loc>
+      <image:title>Lana Extra Azul</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/lana-extra-azul-marino.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/lana-extra-azul-marino.webp</image:loc>
+      <image:title>Lana Extra Azul Marino</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/lana-extra-blanco.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/lana-extra-blanco.webp</image:loc>
+      <image:title>Lana Extra Blanco</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/lana-extra-blanco-invierno.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/lana-extra-blanco-invierno.webp</image:loc>
+      <image:title>Lana Extra Blanco Invierno</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/lana-extra-cafe.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/lana-extra-cafe.webp</image:loc>
+      <image:title>Lana Extra Café</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/lana-extra-calipso.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/lana-extra-calipso.webp</image:loc>
+      <image:title>Lana Extra Calipso</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/lana-extra-fucsia.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/lana-extra-fucsia.webp</image:loc>
+      <image:title>Lana Extra Fucsia</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/lana-extra-morado.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/lana-extra-morado.webp</image:loc>
+      <image:title>Lana Extra Morado</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/lana-extra-negro.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/lana-extra-negro.webp</image:loc>
+      <image:title>Lana Extra Negro</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/lana-extra-rojo.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/lana-extra-rojo.webp</image:loc>
+      <image:title>Lana Extra Rojo</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/lana-extra-rosado.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/lana-extra-rosado.webp</image:loc>
+      <image:title>Lana Extra Rosado</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/lana-extra-terracota.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/lana-extra-terracota.webp</image:loc>
+      <image:title>Lana Extra Terracota</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/lana-extra-verde-pistacho.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/lana-extra-verde-pistacho.webp</image:loc>
+      <image:title>Lana Extra Verde Pistacho</image:title>
+    </image:image>
+  </url>
 </urlset>

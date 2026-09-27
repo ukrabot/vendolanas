@@ -512,8 +512,9 @@ h1, h2, h3, h4 { font-family: var(--fuente-titulo); color: var(--rosa-oscuro); l
 .blog-home, .blog-portada { padding: 80px 0; }
 @media (max-width: 820px) { .blog-cards { grid-template-columns: 1fr; } .articulo h1 { font-size: 2rem; } .articulo-cuerpo h2 { font-size: 1.55rem; } .blog-home, .blog-portada { padding: 56px 0; } }
 
-/* ---------- Menú con 8 enlaces: ajuste en pantallas medianas ---------- */
-@media (min-width: 1081px) and (max-width: 1279px) { .nav-links { gap: 18px; } .nav-links a { font-size: .92rem; } }
+/* ---------- Menú con 9 enlaces: el contenedor tope 1200px obliga a compactar en todo el rango de escritorio ---------- */
+@media (min-width: 1081px) { .logo { flex: 0 0 auto; white-space: nowrap; font-size: 1.45rem; } .nav-acciones { flex: 0 0 auto; } .nav-links { gap: 16px; flex-wrap: nowrap; } .nav-links a { font-size: .9rem; white-space: nowrap; } }
+@media (min-width: 1081px) and (max-width: 1140px) { .nav-links { gap: 12px; } .nav-links a { font-size: .86rem; } }
 
 /* ---------- Página de marca Ukryl ---------- */
 .lineas { padding: 70px 0; }

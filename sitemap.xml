@@ -19,6 +19,15 @@
     <image:image><image:loc>https://vendolanas.cl/assets/img/og/ukryl.jpg</image:loc></image:image>
   </url>
   <url>
+    <loc>https://vendolanas.cl/petunia.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/og/petunia.jpg</image:loc>
+      <image:title>Trapillo Petunia Trapitop</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://vendolanas.cl/blog/</loc>
     <lastmod>2026-09-21</lastmod>
     <priority>0.7</priority>
@@ -805,6 +814,114 @@
     <image:image>
       <image:loc>https://vendolanas.cl/assets/img/productos/ukryl-natura-mostaza.webp</image:loc>
       <image:title>Hilo Ukryl Natura Mostaza</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/trapillo-petunia-coral.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/trapillo-petunia-coral.webp</image:loc>
+      <image:title>Trapillo Petunia Coral</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/trapillo-petunia-rojo.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/trapillo-petunia-rojo.webp</image:loc>
+      <image:title>Trapillo Petunia Rojo</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/trapillo-petunia-verde.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/trapillo-petunia-verde.webp</image:loc>
+      <image:title>Trapillo Petunia Verde</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/trapillo-petunia-cafe.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/trapillo-petunia-cafe.webp</image:loc>
+      <image:title>Trapillo Petunia Café</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/trapillo-petunia-celeste.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/trapillo-petunia-celeste.webp</image:loc>
+      <image:title>Trapillo Petunia Celeste</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/trapillo-petunia-arena.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/trapillo-petunia-arena.webp</image:loc>
+      <image:title>Trapillo Petunia Arena</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/trapillo-petunia-crema.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/trapillo-petunia-crema.webp</image:loc>
+      <image:title>Trapillo Petunia Crema</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/trapillo-petunia-gris.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/trapillo-petunia-gris.webp</image:loc>
+      <image:title>Trapillo Petunia Gris</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/trapillo-petunia-azul-rey.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/trapillo-petunia-azul-rey.webp</image:loc>
+      <image:title>Trapillo Petunia Azul Rey</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/trapillo-petunia-blanco.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/trapillo-petunia-blanco.webp</image:loc>
+      <image:title>Trapillo Petunia Blanco</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/trapillo-petunia-negro.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/trapillo-petunia-negro.webp</image:loc>
+      <image:title>Trapillo Petunia Negro</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/trapillo-petunia-amarillo.html</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/trapillo-petunia-amarillo.webp</image:loc>
+      <image:title>Trapillo Petunia Amarillo</image:title>
     </image:image>
   </url>
 </urlset>

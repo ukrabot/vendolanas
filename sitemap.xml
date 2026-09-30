@@ -1005,4 +1005,22 @@
       <image:title>Cuánta lana necesito para tejer: tabla por proyecto</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://vendolanas.cl/blog/como-tejer-flores-a-crochet.html</loc>
+    <lastmod>2026-09-30</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/blog/como-tejer-flores-a-crochet.webp</image:loc>
+      <image:title>Cómo tejer flores a crochet: 3 patrones fáciles</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/blog/como-tejer-un-chal-a-crochet.html</loc>
+    <lastmod>2026-09-30</lastmod>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/blog/como-tejer-un-chal-a-crochet.webp</image:loc>
+      <image:title>Cómo tejer un chal a crochet paso a paso</image:title>
+    </image:image>
+  </url>
 </urlset>

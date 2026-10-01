@@ -1317,4 +1317,58 @@
       <image:title>Lana Secret Revesderecho Atardecer</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/petunia-fogata-bosque.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/petunia-fogata-bosque.webp</image:loc>
+      <image:title>Petunia Fogata Bosque</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/petunia-fogata-jardin.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/petunia-fogata-jardin.webp</image:loc>
+      <image:title>Petunia Fogata Jardín</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/petunia-fogata-ascuas.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/petunia-fogata-ascuas.webp</image:loc>
+      <image:title>Petunia Fogata Ascuas</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/petunia-fogata-llama.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/petunia-fogata-llama.webp</image:loc>
+      <image:title>Petunia Fogata Llama</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/petunia-fogata-ceniza-rosa.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/petunia-fogata-ceniza-rosa.webp</image:loc>
+      <image:title>Petunia Fogata Ceniza Rosa</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/producto/petunia-fogata-otono.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://vendolanas.cl/assets/img/productos/petunia-fogata-otono.webp</image:loc>
+      <image:title>Petunia Fogata Otoño</image:title>
+    </image:image>
+  </url>
 </urlset>

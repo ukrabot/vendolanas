@@ -35,7 +35,7 @@
   </url>
   <url>
     <loc>https://vendolanas.cl/blog/</loc>
-    <lastmod>2026-11-22</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <priority>0.7</priority>
     <image:image><image:loc>https://vendolanas.cl/assets/img/og/blog.jpg</image:loc></image:image>
   </url>
@@ -1586,6 +1586,18 @@
     <lastmod>2026-10-04</lastmod>
     <priority>0.8</priority>
     <image:image><image:loc>https://vendolanas.cl/assets/img/blog/como-tejer-pantuflas-a-crochet.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/blog/como-tejer-aros-a-crochet.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://vendolanas.cl/assets/img/blog/como-tejer-aros-a-crochet.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://vendolanas.cl/blog/como-tejer-un-bucket-hat-a-crochet.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://vendolanas.cl/assets/img/blog/como-tejer-un-bucket-hat-a-crochet.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://vendolanas.cl/blog/como-tejer-un-llavero-a-crochet.html</loc>

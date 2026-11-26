@@ -5,7 +5,7 @@ para cobrar con Mercado Pago y Flow, entregar las descargas y alimentar el panel
 
 ## 1. Base de datos D1
 Cloudflare → Storage & Databases → D1 → **Create database** → nombre `vendolanas-db`.
-Copia el **Database ID** y pégalo en `wrangler.jsonc` en lugar de `REEMPLAZAR_CON_EL_ID_DE_D1`.
+El **Database ID** ya está en `wrangler.jsonc`.
 Las tablas se crean solas la primera vez que alguien usa la API.
 
 ## 2. Secrets del Worker

@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /packs/carrito
+Disallow: /packs/gracias
 
 Sitemap: https://vendolanas.cl/sitemap.xml

@@ -1,0 +1,28 @@
+// Configuración del Worker que sirve vendolanas.cl.
+// Los datos sensibles (Access Token, Secret Key, contraseña del panel) NO van aquí:
+// se guardan como "secrets" en Cloudflare → Workers → vendolanas → Settings → Variables and Secrets.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "vendolanas",
+  "main": "worker/index.js",
+  "compatibility_date": "2025-11-01",
+  "assets": {
+    "directory": ".",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "vendolanas-db",
+      "database_id": "REEMPLAZAR_CON_EL_ID_DE_D1"
+    }
+  ],
+  "vars": {
+    // Producción de Flow. Para probar con la cuenta sandbox usa https://sandbox.flow.cl/api
+    "FLOW_API_URL": "https://www.flow.cl/api",
+    // Remitente de los correos (solo si configuras RESEND_API_KEY). Ej: "VendoLanas <pedidos@vendolanas.cl>"
+    "EMAIL_FROM": ""
+  },
+  "observability": { "enabled": true }
+}

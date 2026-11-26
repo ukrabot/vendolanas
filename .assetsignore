@@ -1,2 +1,11 @@
 .git
+.gitignore
 .claude
+.wrangler
+.dev.vars
+worker
+wrangler.jsonc
+package.json
+package-lock.json
+node_modules
+*.md

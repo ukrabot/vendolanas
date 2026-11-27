@@ -8,7 +8,8 @@
     'pack-cortinas-a-crochet': { slug: 'pack-cortinas-a-crochet', titulo: 'Pack digital: Cortinas a crochet', precio: 3990, pagina: '/packs/pack-cortinas-a-crochet.html' },
     'pack-cuanta-lana-necesito': { slug: 'pack-cuanta-lana-necesito', titulo: 'Pack digital: Cuánta lana necesito', precio: 3990, pagina: '/packs/pack-cuanta-lana-necesito.html' },
     'pack-caminos-de-mesa-a-crochet': { slug: 'pack-caminos-de-mesa-a-crochet', titulo: 'Pack digital: Caminos de mesa a crochet', precio: 3990, pagina: '/packs/pack-caminos-de-mesa-a-crochet.html' },
-    'pack-chales-a-crochet': { slug: 'pack-chales-a-crochet', titulo: 'Pack digital: Chales a crochet', precio: 3990, pagina: '/packs/pack-chales-a-crochet.html' }
+    'pack-chales-a-crochet': { slug: 'pack-chales-a-crochet', titulo: 'Pack digital: Chales a crochet', precio: 3990, pagina: '/packs/pack-chales-a-crochet.html' },
+    'pack-canastas-a-crochet': { slug: 'pack-canastas-a-crochet', titulo: 'Pack digital: Canastas a crochet', precio: 3990, pagina: '/packs/pack-canastas-a-crochet.html' }
   };
   var IMAGEN = {};
   var memoria = [];

@@ -70,6 +70,14 @@ const PACKS_INICIALES = [
     archivo: 'pack-chales-a-crochet.pdf',
     pagina: '/packs/pack-chales-a-crochet.html',
   },
+  {
+    slug: 'pack-canastas-a-crochet',
+    titulo: 'Pack digital: Canastas a crochet',
+    descripcion: '6 diseños de canastas (redonda, ovalada, rectangular, con tapa, set apilable y cubremaceta), base vuelta por vuelta, trapillo y costo por tamaño. PDF de descarga inmediata.',
+    precio: 3990,
+    archivo: 'pack-canastas-a-crochet.pdf',
+    pagina: '/packs/pack-canastas-a-crochet.html',
+  },
 ];
 
 // ---------------------------------------------------------------------------

@@ -46,6 +46,12 @@
     <image:image><image:loc>https://vendolanas.cl/assets/img/packs/pack-aros-a-crochet.webp</image:loc></image:image>
   </url>
   <url>
+    <loc>https://vendolanas.cl/packs/pack-cortinas-a-crochet.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://vendolanas.cl/assets/img/packs/pack-cortinas-a-crochet.webp</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://vendolanas.cl/blog/</loc>
     <lastmod>2026-11-25</lastmod>
     <priority>0.7</priority>
@@ -1643,7 +1649,7 @@
   </url>
   <url>
     <loc>https://vendolanas.cl/blog/como-tejer-una-cortina-a-crochet.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <priority>0.8</priority>
     <image:image><image:loc>https://vendolanas.cl/assets/img/blog/como-tejer-una-cortina-a-crochet.webp</image:loc></image:image>
   </url>

@@ -35,6 +35,14 @@ const PACKS_INICIALES = [
     archivo: 'pack-aros-a-crochet.pdf',
     pagina: '/packs/pack-aros-a-crochet.html',
   },
+  {
+    slug: 'pack-cortinas-a-crochet',
+    titulo: 'Pack digital: Cortinas a crochet',
+    descripcion: '9 diseños de cortinas con gráficos de filet, calculadora de medidas y de hilo, guía para colgar y lavar, y planificador imprimible. PDF de descarga inmediata.',
+    precio: 3990,
+    archivo: 'pack-cortinas-a-crochet.pdf',
+    pagina: '/packs/pack-cortinas-a-crochet.html',
+  },
 ];
 
 // ---------------------------------------------------------------------------

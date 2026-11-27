@@ -4,9 +4,10 @@
   'use strict';
   var CLAVE = 'vl_carrito_packs';
   var RESPALDO = {
-    'pack-aros-a-crochet': { slug: 'pack-aros-a-crochet', titulo: 'Pack digital: Aros a crochet', precio: 3990, pagina: '/packs/pack-aros-a-crochet.html' }
+    'pack-aros-a-crochet': { slug: 'pack-aros-a-crochet', titulo: 'Pack digital: Aros a crochet', precio: 3990, pagina: '/packs/pack-aros-a-crochet.html' },
+    'pack-cortinas-a-crochet': { slug: 'pack-cortinas-a-crochet', titulo: 'Pack digital: Cortinas a crochet', precio: 3990, pagina: '/packs/pack-cortinas-a-crochet.html' }
   };
-  var IMAGEN = { 'pack-aros-a-crochet': '/assets/img/packs/pack-aros-a-crochet-portada.webp' };
+  var IMAGEN = {};
   var memoria = [];
   var catalogo = null;
 

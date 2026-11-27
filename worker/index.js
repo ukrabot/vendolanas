@@ -62,6 +62,14 @@ const PACKS_INICIALES = [
     archivo: 'pack-caminos-de-mesa-a-crochet.pdf',
     pagina: '/packs/pack-caminos-de-mesa-a-crochet.html',
   },
+  {
+    slug: 'pack-chales-a-crochet',
+    titulo: 'Pack digital: Chales a crochet',
+    descripcion: '6 diseños de chales (triangular, semicircular y estola), tabla de puntos por vuelta, hilo y costo por tamaño, bordes, flecos y bloqueo. PDF de descarga inmediata.',
+    precio: 3990,
+    archivo: 'pack-chales-a-crochet.pdf',
+    pagina: '/packs/pack-chales-a-crochet.html',
+  },
 ];
 
 // ---------------------------------------------------------------------------

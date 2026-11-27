@@ -46,6 +46,14 @@ const PACKS_INICIALES = [
     archivo: 'pack-cortinas-a-crochet.pdf',
     pagina: '/packs/pack-cortinas-a-crochet.html',
   },
+  {
+    slug: 'pack-cuanta-lana-necesito',
+    titulo: 'Pack digital: Cuánta lana necesito',
+    descripcion: 'Tablas de lana por proyecto y talla, conversión de metros a ovillos para cada línea, factores por punto y planillas imprimibles. PDF de descarga inmediata.',
+    precio: 3990,
+    archivo: 'pack-cuanta-lana-necesito.pdf',
+    pagina: '/packs/pack-cuanta-lana-necesito.html',
+  },
 ];
 
 // ---------------------------------------------------------------------------

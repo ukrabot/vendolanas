@@ -39,6 +39,10 @@
         .adm-acc button { background: none; border: 1.5px solid var(--crema-oscuro); border-radius: 999px; padding: 3px 10px; font: inherit; font-size: .78rem; cursor: pointer; color: var(--rosa-btn); }
         .adm-acc button:hover { border-color: var(--rosa-btn); }
         .adm-acc button[disabled] { opacity: .4; cursor: not-allowed; }
+        .adm-ajustes { margin-bottom: 24px; }
+        .adm-aj-fila { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; }
+        .adm-aj-check { display: inline-flex; gap: 8px; align-items: center; font-weight: 600; margin-right: 10px; }
+        .adm-aj-check input { accent-color: var(--rosa-btn); width: 18px; height: 18px; }
         .adm-acc .adm-eliminar { color: #a12b2b; } .adm-acc .adm-eliminar:hover { border-color: #a12b2b; background: #fdecec; }
         .adm-pag { display: flex; gap: 10px; justify-content: flex-end; align-items: center; margin-top: 12px; font-size: .88rem; }
         .adm-msg { min-height: 1.4em; font-size: .9rem; margin: 10px 0; }
@@ -105,6 +109,17 @@
             </div>
 
             <div data-panel="packs" hidden>
+                <section class="pk-panel adm-ajustes" aria-labelledby="aj-titulo">
+                    <h2 id="aj-titulo" style="font-size:1.2rem;margin-bottom:6px">Mensaje emergente en los artículos</h2>
+                    <p style="font-size:.9rem;margin:0 0 12px">En los artículos que tienen pack (aros y cortinas), aparece un mensaje para comprar el pack de ese artículo después del tiempo de lectura que elijas. Solo cuenta el tiempo con la página a la vista. Si la persona lo cierra, no se le vuelve a mostrar ese pack por 3 días.</p>
+                    <div class="adm-aj-fila">
+                        <label class="adm-aj-check"><input type="checkbox" id="aj-activo"> Mostrar el mensaje</label>
+                        <label for="aj-seg">Mostrar después de</label>
+                        <input type="number" id="aj-seg" class="adm-input" min="5" max="600" step="1" style="width:100px"> <span>segundos</span>
+                        <button type="button" class="btn btn-sm" id="aj-guardar">Guardar</button>
+                    </div>
+                    <p class="adm-msg" id="adm-msg-ajustes" role="status"></p>
+                </section>
                 <p>Cambia el título, la descripción, el precio o desactiva un pack. Los cambios aplican de inmediato en el carrito y en los precios de la tienda. Un pack solo se puede comprar cuando tiene su PDF subido.</p>
                 <p class="adm-msg" id="adm-msg-packs" role="status"></p>
                 <div class="adm-tabla-wrap">

@@ -25,6 +25,9 @@ const MAX_ARCHIVO_BYTES = 20000000;   // 20 MB por pack
 const DIAS_VIGENCIA = 60;
 const SESION_HORAS = 12;
 
+// Ajustes editables desde el panel (mensaje emergente de los artículos).
+const AJUSTES_INICIALES = { popup_activo: 1, popup_segundos: 20 };
+
 // Packs iniciales. El panel admin puede cambiar título, precio y estado.
 const PACKS_INICIALES = [
   {
@@ -148,6 +151,9 @@ async function prepararDB(env) {
       descargas INTEGER NOT NULL DEFAULT 0, email_enviado INTEGER NOT NULL DEFAULT 0)`),
     env.DB.prepare('CREATE INDEX IF NOT EXISTS idx_pedidos_creado ON pedidos (creado)'),
     env.DB.prepare('CREATE TABLE IF NOT EXISTS intentos_login (ip TEXT NOT NULL, ts INTEGER NOT NULL)'),
+    env.DB.prepare('CREATE TABLE IF NOT EXISTS ajustes (clave TEXT PRIMARY KEY, valor TEXT NOT NULL)'),
+    ...Object.entries(AJUSTES_INICIALES).map(([k, v]) =>
+      env.DB.prepare('INSERT OR IGNORE INTO ajustes (clave, valor) VALUES (?, ?)').bind(k, String(v))),
     ...PACKS_INICIALES.map((p) =>
       env.DB.prepare('INSERT OR IGNORE INTO packs (slug, titulo, descripcion, precio, archivo, pagina, activo, actualizado) VALUES (?, ?, ?, ?, ?, ?, 1, ?)')
         .bind(p.slug, p.titulo, p.descripcion, p.precio, p.archivo, p.pagina, ahoraISO())
@@ -369,6 +375,30 @@ async function mapaPacks(env) {
 // ---------------------------------------------------------------------------
 // Rutas públicas
 // ---------------------------------------------------------------------------
+async function leerAjustes(env) {
+  const { results } = await env.DB.prepare('SELECT clave, valor FROM ajustes').all();
+  const a = { ...AJUSTES_INICIALES };
+  for (const r of results) a[r.clave] = Number(r.valor);
+  return { popup_activo: !!a.popup_activo, popup_segundos: a.popup_segundos };
+}
+
+async function apiConfig(env) {
+  // Se cachea 1 minuto: un cambio en el panel se nota en los artículos en menos de un minuto.
+  return json(await leerAjustes(env), 200, { 'Cache-Control': 'public, max-age=60' });
+}
+
+async function apiAdminGuardarAjustes(request, env) {
+  const b = await leerJSON(request);
+  if (!b) return error('Solicitud inválida.');
+  const seg = Math.round(Number(b.popup_segundos));
+  if (!Number.isFinite(seg) || seg < 5 || seg > 600) return error('El tiempo debe estar entre 5 y 600 segundos.');
+  await env.DB.batch([
+    env.DB.prepare('INSERT OR REPLACE INTO ajustes (clave, valor) VALUES (?, ?)').bind('popup_segundos', String(seg)),
+    env.DB.prepare('INSERT OR REPLACE INTO ajustes (clave, valor) VALUES (?, ?)').bind('popup_activo', b.popup_activo ? '1' : '0'),
+  ]);
+  return json(await leerAjustes(env));
+}
+
 async function apiPacks(env) {
   const { results } = await env.DB.prepare('SELECT slug, titulo, descripcion, precio, pagina FROM packs WHERE activo = 1 AND archivo_bytes > 0 ORDER BY titulo').all();
   return json({ packs: results });
@@ -725,6 +755,8 @@ async function rutaAdmin(request, env, ctx, partes) {
   if (!(await sesionValida(request, env))) return error('Sesión vencida. Vuelve a entrar.', 401);
   if (m !== 'GET' && !mismoOrigen(request)) return error('Origen no permitido.', 403);
   if (partes[0] === 'sesion' && m === 'GET') return json({ ok: true });
+  if (partes[0] === 'ajustes' && m === 'GET') return json(await leerAjustes(env));
+  if (partes[0] === 'ajustes' && m === 'PUT') return apiAdminGuardarAjustes(request, env);
   if (partes[0] === 'resumen' && m === 'GET') return apiAdminResumen(request, env);
   if (partes[0] === 'pedidos' && partes[1] && partes[2] && m === 'POST') return apiAdminAccion(request, env, partes[1], partes[2], ctx);
   if (partes[0] === 'packs' && !partes[1] && m === 'GET') return apiAdminPacks(env);
@@ -745,6 +777,9 @@ async function rutaApi(request, env, ctx) {
   await prepararDB(env);
 
   switch (partes[0]) {
+    case 'config':
+      if (m === 'GET') return apiConfig(env);
+      break;
     case 'packs':
       if (m === 'GET') return apiPacks(env);
       break;

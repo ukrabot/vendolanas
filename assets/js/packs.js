@@ -194,6 +194,99 @@
     consultar();
   }
 
+  // ---------- Mensaje emergente en artículos con pack ----------
+  // Aparece tras X segundos de lectura con la pestaña visible (X se define en el panel admin).
+  var DIAS_SILENCIO = 3;
+  function guardado(tipo, clave, valor) {
+    try {
+      var st = window[tipo];
+      if (valor === undefined) return st.getItem(clave);
+      st.setItem(clave, valor);
+    } catch (e) { return null; }
+  }
+  function evento(nombre, slug) {
+    try { if (typeof window.gtag === 'function') window.gtag('event', nombre, { pack: slug }); } catch (e) { /* sin analítica */ }
+  }
+
+  function mensajeEmergente() {
+    var origen = document.querySelector('.pk-promo [data-comprar-pack]');
+    if (!origen) return;
+    var slug = origen.getAttribute('data-comprar-pack');
+    if (leer().indexOf(slug) !== -1) return;
+    if (guardado('sessionStorage', 'vl_popup_visto_' + slug)) return;
+    var cerrado = Number(guardado('localStorage', 'vl_popup_cerrado_' + slug) || 0);
+    if (cerrado && Date.now() - cerrado < DIAS_SILENCIO * 86400000) return;
+
+    var config = fetch('/api/config').then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
+      .catch(function () { return { popup_activo: true, popup_segundos: 20 }; });
+    Promise.all([config, fetch('/api/packs').then(function (r) { if (!r.ok) throw new Error(); return r.json(); })])
+      .then(function (res) {
+        var cfg = res[0];
+        var pack = res[1].packs.filter(function (x) { return x.slug === slug; })[0];
+        if (!cfg.popup_activo || !pack) return;
+        var segundos = Math.max(5, Number(cfg.popup_segundos) || 20), visto = 0;
+        var reloj = setInterval(function () {
+          if (document.visibilityState !== 'visible') return;
+          if (++visto < segundos) return;
+          clearInterval(reloj);
+          if (leer().indexOf(slug) === -1) mostrar(pack);
+        }, 1000);
+      })
+      .catch(function () { /* sin API no se muestra nada */ });
+  }
+
+  function mostrar(pack) {
+    guardado('sessionStorage', 'vl_popup_visto_' + pack.slug, '1');
+    var anterior = document.activeElement;
+    var fondo = document.createElement('div');
+    fondo.className = 'pk-modal-fondo';
+    fondo.innerHTML =
+      '<div class="pk-modal" role="dialog" aria-modal="true" aria-labelledby="pk-modal-titulo">' +
+        '<button type="button" class="pk-modal-cerrar" aria-label="Cerrar">×</button>' +
+        '<img src="/assets/img/packs/' + esc(pack.slug) + '-portada.webp" alt="" width="140" height="198">' +
+        '<div>' +
+          '<span class="pk-etiqueta">Pack digital en PDF</span>' +
+          '<h2 id="pk-modal-titulo">¿Te está gustando esta guía? Llévate el pack completo</h2>' +
+          '<p><strong>' + esc(pack.titulo) + '</strong></p>' +
+          '<p>' + esc(pack.descripcion || '') + '</p>' +
+          '<p class="pk-precio">' + clp(pack.precio) + ' <small>pago único</small></p>' +
+          '<div class="pk-acciones">' +
+            '<button type="button" class="btn" data-comprar-pack="' + esc(pack.slug) + '">Comprar ahora</button>' +
+            '<a class="btn btn-outline" href="' + esc(pack.pagina || '/packs/') + '">Ver qué incluye</a>' +
+          '</div>' +
+          '<button type="button" class="pk-modal-no">No, gracias</button>' +
+        '</div>' +
+      '</div>';
+    document.body.appendChild(fondo);
+    document.body.classList.add('pk-modal-abierto');
+    evento('popup_pack_visto', pack.slug);
+    requestAnimationFrame(function () { fondo.classList.add('visible'); });
+    fondo.querySelector('.pk-modal-cerrar').focus();
+
+    function cerrar(recordar) {
+      if (recordar) guardado('localStorage', 'vl_popup_cerrado_' + pack.slug, String(Date.now()));
+      document.removeEventListener('keydown', teclas);
+      document.body.classList.remove('pk-modal-abierto');
+      fondo.remove();
+      if (anterior && anterior.focus) anterior.focus();
+    }
+    function teclas(ev) {
+      if (ev.key === 'Escape') { cerrar(true); return; }
+      if (ev.key === 'Tab') { // mantener el foco dentro del mensaje
+        var f = fondo.querySelectorAll('button, a[href]');
+        var primero = f[0], ultimo = f[f.length - 1];
+        if (ev.shiftKey && document.activeElement === primero) { ev.preventDefault(); ultimo.focus(); }
+        else if (!ev.shiftKey && document.activeElement === ultimo) { ev.preventDefault(); primero.focus(); }
+      }
+    }
+    document.addEventListener('keydown', teclas);
+    fondo.addEventListener('click', function (ev) {
+      if (ev.target === fondo || ev.target.closest('.pk-modal-cerrar, .pk-modal-no')) { cerrar(true); return; }
+      if (ev.target.closest('[data-comprar-pack]')) evento('popup_pack_compra', pack.slug);
+      if (ev.target.closest('a.btn-outline')) evento('popup_pack_detalle', pack.slug);
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     contador();
     botones();
@@ -202,5 +295,6 @@
     if (c) paginaCarrito(c);
     var g = document.getElementById('pk-gracias');
     if (g) paginaGracias(g);
+    mensajeEmergente();
   });
 })();

@@ -122,7 +122,25 @@
   $('#pag-ant').addEventListener('click', function () { if (pagina > 0) { pagina--; cargarVentas(); } });
   $('#pag-sig').addEventListener('click', function () { if ((pagina + 1) * 50 < totalPedidos) { pagina++; cargarVentas(); } });
 
+  function cargarAjustes() {
+    return api('ajustes').then(function (a) {
+      $('#aj-activo').checked = a.popup_activo;
+      $('#aj-seg').value = a.popup_segundos;
+    }).catch(function (e) { msg($('#adm-msg-ajustes'), e.message, 'err'); });
+  }
+  $('#aj-guardar').addEventListener('click', function () {
+    var m = $('#adm-msg-ajustes');
+    var seg = Number($('#aj-seg').value);
+    if (!(seg >= 5 && seg <= 600)) { msg(m, 'El tiempo debe estar entre 5 y 600 segundos.', 'err'); return; }
+    api('ajustes', { method: 'PUT', body: JSON.stringify({ popup_activo: $('#aj-activo').checked, popup_segundos: seg }) })
+      .then(function (a) {
+        msg(m, a.popup_activo ? 'Guardado. El mensaje aparecerá a los ' + a.popup_segundos + ' segundos de lectura (puede tardar hasta 1 minuto en aplicarse).' : 'Guardado. El mensaje emergente quedó desactivado.', 'ok');
+      })
+      .catch(function (e) { msg(m, e.message, 'err'); });
+  });
+
   function cargarPacks() {
+    cargarAjustes();
     return api('packs').then(function (d) {
       $('#adm-packs').innerHTML = d.packs.map(function (p) {
         return '<tr data-slug="' + esc(p.slug) + '">' +

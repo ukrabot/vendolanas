@@ -54,6 +54,14 @@ const PACKS_INICIALES = [
     archivo: 'pack-cuanta-lana-necesito.pdf',
     pagina: '/packs/pack-cuanta-lana-necesito.html',
   },
+  {
+    slug: 'pack-caminos-de-mesa-a-crochet',
+    titulo: 'Pack digital: Caminos de mesa a crochet',
+    descripcion: '8 diseños de caminos de mesa con 3 gráficos de filet, medidas para cada mesa, hilo y costo por tamaño, bordes, flecos y planificador. PDF de descarga inmediata.',
+    precio: 3990,
+    archivo: 'pack-caminos-de-mesa-a-crochet.pdf',
+    pagina: '/packs/pack-caminos-de-mesa-a-crochet.html',
+  },
 ];
 
 // ---------------------------------------------------------------------------

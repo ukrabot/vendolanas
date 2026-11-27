@@ -58,6 +58,12 @@
     <image:image><image:loc>https://vendolanas.cl/assets/img/packs/pack-cuanta-lana-necesito.webp</image:loc></image:image>
   </url>
   <url>
+    <loc>https://vendolanas.cl/packs/pack-caminos-de-mesa-a-crochet.html</loc>
+    <lastmod>2026-11-27</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://vendolanas.cl/assets/img/packs/pack-caminos-de-mesa-a-crochet.webp</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://vendolanas.cl/blog/</loc>
     <lastmod>2026-11-25</lastmod>
     <priority>0.7</priority>

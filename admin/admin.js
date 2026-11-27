@@ -78,6 +78,7 @@
         '<button type="button" data-acc="verificar"' + (pagado ? ' disabled' : '') + '>Verificar pago</button>' +
         '<button type="button" data-acc="reiniciar"' + (pagado ? '' : ' disabled') + '>Reiniciar descargas</button>' +
         '<button type="button" data-acc="reenviar"' + (pagado && correoActivo ? '' : ' disabled') + ' title="' + (correoActivo ? '' : 'Configura RESEND_API_KEY para enviar correos') + '">Reenviar correo</button>' +
+        '<button type="button" class="adm-eliminar" data-acc="eliminar" data-estado="' + esc(p.estado) + '">Eliminar</button>' +
       '</div></td></tr>';
   }
 
@@ -94,14 +95,24 @@
       return;
     }
     if (acc === 'reiniciar' && !window.confirm('¿Reiniciar el contador de descargas y extender el enlace 60 días?')) return;
+    if (acc === 'eliminar') {
+      if (b.getAttribute('data-estado') === 'pagado') {
+        var escrito = window.prompt('Este pedido está PAGADO. Si lo eliminas, el cliente pierde su enlace de descarga y la venta desaparece de tus totales.\n\nPara confirmar, escribe el número de pedido: ' + id);
+        if (escrito === null) return;
+        if (escrito.trim().toUpperCase() !== id) { msg(m, 'El número no coincide. No se eliminó el pedido.', 'err'); return; }
+      } else if (!window.confirm('¿Eliminar el pedido ' + id + '? Antes de borrarlo revisaremos con el medio de pago que no se haya pagado. Esta acción no se puede deshacer.')) {
+        return;
+      }
+    }
     b.disabled = true;
     api('pedidos/' + encodeURIComponent(id) + '/' + acc, { method: 'POST', body: '{}' })
       .then(function (d) {
+        if (acc === 'eliminar') { msg(m, 'Pedido ' + id + ' eliminado.', 'ok'); cargarVentas(); return; }
         var textos = { verificar: 'Estado consultado al medio de pago: ' + (ESTADOS[d.pedido.estado] || d.pedido.estado) + '.', reiniciar: 'Descargas reiniciadas.', reenviar: 'Correo reenviado a ' + d.pedido.email + '.' };
         msg(m, textos[acc], 'ok');
         cargarVentas();
       })
-      .catch(function (err) { msg(m, err.message, 'err'); b.disabled = false; });
+      .catch(function (err) { msg(m, err.message, 'err'); b.disabled = false; if (acc === 'eliminar') cargarVentas(); });
   });
 
   var tBuscar;

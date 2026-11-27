@@ -614,6 +614,26 @@ async function apiAdminResumen(request, env) {
   });
 }
 
+// Vuelve a consultar el estado al medio de pago (por si un aviso no llegó).
+// Devuelve un mensaje si no se puede consultar; lanza si el medio de pago falla.
+async function verificarConProveedor(env, p, ctx) {
+  if (p.metodo === 'mp') {
+    if (!env.MP_ACCESS_TOKEN) return 'Mercado Pago no está configurado.';
+    const r = await fetch(`${mpBase(env)}/v1/payments/search?external_reference=${encodeURIComponent(p.id)}&sort=date_created&criteria=desc`, {
+      headers: { Authorization: `Bearer ${env.MP_ACCESS_TOKEN}` },
+    });
+    if (!r.ok) throw new Error(`Mercado Pago (búsqueda) respondió ${r.status}`);
+    const data = await r.json().catch(() => ({}));
+    const pagos = data.results || [];
+    const aprobado = pagos.find((x) => x.status === 'approved') || pagos[0];
+    if (aprobado) await mpProcesarPago(env, String(aprobado.id), ctx);
+  } else if (p.proveedor_ref) {
+    if (!(env.FLOW_API_KEY && env.FLOW_SECRET_KEY)) return 'Flow no está configurado.';
+    await flowProcesarToken(env, p.proveedor_ref, ctx);
+  }
+  return null;
+}
+
 async function apiAdminAccion(request, env, id, accion, ctx) {
   const p = await obtenerPedido(env, id);
   if (!p) return error('Pedido no encontrado.', 404);
@@ -625,20 +645,25 @@ async function apiAdminAccion(request, env, id, accion, ctx) {
     if (!(env.RESEND_API_KEY && env.EMAIL_FROM)) return error('El envío de correos no está configurado. Copia el enlace y envíalo por WhatsApp.');
     await enviarCorreo(env, p, true);
   } else if (accion === 'verificar') {
-    // Vuelve a consultar el estado al medio de pago (por si un webhook no llegó).
-    if (p.metodo === 'mp') {
-      if (!env.MP_ACCESS_TOKEN) return error('Mercado Pago no está configurado.');
-      const r = await fetch(`${mpBase(env)}/v1/payments/search?external_reference=${encodeURIComponent(p.id)}&sort=date_created&criteria=desc`, {
-        headers: { Authorization: `Bearer ${env.MP_ACCESS_TOKEN}` },
-      });
-      const data = await r.json().catch(() => ({}));
-      const pagos = data.results || [];
-      const aprobado = pagos.find((x) => x.status === 'approved') || pagos[0];
-      if (aprobado) await mpProcesarPago(env, String(aprobado.id), ctx);
-    } else if (p.proveedor_ref) {
-      if (!(env.FLOW_API_KEY && env.FLOW_SECRET_KEY)) return error('Flow no está configurado.');
-      await flowProcesarToken(env, p.proveedor_ref, ctx);
+    const falla = await verificarConProveedor(env, p, ctx);
+    if (falla) return error(falla);
+  } else if (accion === 'eliminar') {
+    // Antes de borrar un pedido no pagado, se confirma con el medio de pago que de verdad no se pagó.
+    if (p.estado !== 'pagado' && p.proveedor_ref) {
+      try {
+        const falla = await verificarConProveedor(env, p, ctx);
+        if (falla) return error(`${falla} No se eliminó el pedido.`);
+      } catch (e) {
+        console.log('eliminar/verificar', e.message);
+        return error('No pudimos confirmar el estado con el medio de pago. Inténtalo de nuevo en unos minutos; el pedido no se eliminó.', 502);
+      }
+      const ahora = await obtenerPedido(env, id);
+      if (ahora.estado === 'pagado') {
+        return json({ error: 'Este pedido sí se pagó: el medio de pago lo confirmó recién y ya quedó como Pagado. No se eliminó.', pedido: pedidoAdmin(ahora) }, 409);
+      }
     }
+    await env.DB.prepare('DELETE FROM pedidos WHERE id = ?').bind(id).run();
+    return json({ ok: true, eliminado: id });
   } else {
     return error('Acción desconocida.', 404);
   }
